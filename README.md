@@ -83,4 +83,4 @@ Las contribuciones son bienvenidas. Para contribuir:
 ## Autor
 
 - Desarrollado como proyecto final del curso
-- Año: 2024 
+- Año: 2025
