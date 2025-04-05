@@ -1,0 +1,96 @@
+.sidebar {
+    height: 100%;
+    width: 250px;
+    position: fixed;
+    top: 0;
+    left: -250px;
+    background-color: #0d6efd;
+    transition: 0.3s;
+    z-index: 1000;
+    padding-top: 60px;
+}
+
+.sidebar.active {
+    left: 0;
+}
+
+.sidebar .nav-link {
+    color: white !important;
+    padding: 15px 25px;
+    transition: 0.2s;
+}
+
+.sidebar .nav-link:hover {
+    background-color: rgba(255, 255, 255, 0.1);
+}
+
+.sidebar .nav-link.active {
+    background-color: rgba(255, 255, 255, 0.2);
+}
+
+.toggle-sidebar {
+    position: fixed;
+    top: 15px;
+    left: 15px;
+    z-index: 1001;
+    border: none;
+    background-color: #0d6efd;
+    color: white;
+    width: 45px;
+    height: 45px;
+    border-radius: 8px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.2);
+    transition: all 0.3s ease;
+}
+
+.toggle-sidebar:hover {
+    background-color: #0b5ed7;
+    transform: scale(1.05);
+}
+
+.main-content {
+    margin-left: 0;
+    transition: 0.3s;
+    padding: 20px;
+    padding-top: 60px;
+}
+
+.main-content.shifted {
+    margin-left: 250px;
+}
+
+@media (max-width: 768px) {
+    .main-content.shifted {
+        margin-left: 0;
+    }
+}
+
+.navbar-brand {
+    margin-left: 50px;
+    color: white !important;
+    text-decoration: none;
+}
+
+.main-title {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    margin-bottom: 30px;
+}
+
+.main-title img {
+    width: 40px;
+    height: 40px;
+}
+
+/* Ocultar mensajes de conexión */
+body > *:first-child:not(.toggle-sidebar):not(.sidebar):not(.main-content) {
+    display: none !important;
+}
+
+.connection-message {
+    display: none !important;
+} 
